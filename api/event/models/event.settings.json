@@ -1,0 +1,75 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "name": "Event",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Poster": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Start_Time": {
+      "type": "time"
+    },
+    "End_Time": {
+      "type": "time"
+    },
+    "Venue": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Contact_Number": {
+      "type": "biginteger"
+    },
+    "Announcements": {
+      "type": "component",
+      "repeatable": true,
+      "component": "event-announcement.announcements"
+    },
+    "Tagline": {
+      "type": "richtext"
+    },
+    "Start_date": {
+      "type": "date"
+    },
+    "End_date": {
+      "type": "date"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "events"
+    },
+    "event_categories": {
+      "collection": "event-categories",
+      "via": "events"
+    },
+    "Registration_Link": {
+      "type": "string"
+    },
+    "nsutthon_teams": {
+      "type": "component",
+      "repeatable": true,
+      "component": "events.nsut-thon-teams"
+    }
+  }
+}

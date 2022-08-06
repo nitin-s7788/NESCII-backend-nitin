@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "unapproved_blogs",
+  "info": {
+    "name": "UnapprovedBlogs",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "Content": {
+      "type": "richtext"
+    },
+    "tagline": {
+      "type": "string"
+    },
+    "view_count": {
+      "type": "integer"
+    },
+    "ImageUrl": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "approval_2": {
+      "type": "boolean"
+    },
+    "original_blog_id": {
+      "type": "string"
+    },
+    "author": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "unapproved_blogs"
+    },
+    "category": {
+      "model": "categories"
+    },
+    "tags": {
+      "collection": "tags"
+    },
+    "content_images": {
+      "type": "json",
+      "private": false
+    },
+    "content_delta": {
+      "type": "json"
+    },
+    "search_tags": {
+      "type": "json"
+    }
+  }
+}

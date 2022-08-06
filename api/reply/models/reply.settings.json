@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "replies",
+  "info": {
+    "name": "Reply",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Reply_comment": {
+      "type": "text"
+    },
+    "Reports": {
+      "type": "integer"
+    },
+    "author": {
+      "via": "replies",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "of_comment": {
+      "model": "comment",
+      "via": "replies"
+    },
+    "timestamp": {
+      "type": "datetime"
+    }
+  }
+}

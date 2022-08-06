@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/coming-soon-emails",
+      "handler": "coming-soon-emails.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/coming-soon-emails/count",
+      "handler": "coming-soon-emails.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/coming-soon-emails/:id",
+      "handler": "coming-soon-emails.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/coming-soon-emails",
+      "handler": "coming-soon-emails.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/coming-soon-emails/:id",
+      "handler": "coming-soon-emails.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/coming-soon-emails/:id",
+      "handler": "coming-soon-emails.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_event_announcement_announcements",
+  "info": {
+    "name": "Announcements",
+    "icon": "archive",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Message": {
+      "type": "richtext"
+    },
+    "CreatedAt": {
+      "type": "datetime"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/users/custom",
+      "handler": "User.findCustom",
+      "config": {
+        "policies": [],
+        "prefix": ""
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/users/custom/:id",
+      "handler": "User.findOneCustom",
+      "config": {
+        "policies": [],
+        "prefix": ""
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/user/:id",
+      "handler": "User.findAUser",
+      "config": {
+        "policies": [],
+        "prefix": ""
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/users/userops",
+      "handler": "User.updateUserOps",
+      "config": {
+        "policies": [],
+        "prefix": ""
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/users/update",
+      "handler": "User.updateProfile",
+      "config": {
+        "policies": [],
+        "prefix": ""
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/users/all",
+      "handler": "User.getAllValid",
+      "config": {
+        "policies": [],
+        "prefix": ""
+      }
+    }
+  ]
+}

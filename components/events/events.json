@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_events_events",
+  "info": {
+    "name": "events",
+    "icon": "adjust"
+  },
+  "options": {},
+  "attributes": {
+    "event": {
+      "model": "event"
+    },
+    "points": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_events_nsut_thon_teams",
+  "info": {
+    "name": "NSUTThon Teams",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "team": {
+      "model": "team"
+    },
+    "points": {
+      "type": "integer"
+    }
+  }
+}

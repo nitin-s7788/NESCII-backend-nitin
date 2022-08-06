@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "comments",
+  "info": {
+    "name": "Comment",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Comment": {
+      "type": "text"
+    },
+    "Reports": {
+      "type": "integer"
+    },
+    "author": {
+      "via": "comments",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "timeStamp": {
+      "type": "datetime"
+    },
+    "blog": {
+      "via": "comments",
+      "model": "blogs"
+    },
+    "replies": {
+      "via": "of_comment",
+      "collection": "reply"
+    }
+  }
+}

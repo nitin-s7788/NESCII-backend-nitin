@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "coming_soon_emails",
+  "info": {
+    "name": "coming_soon_emails"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "email": {
+      "type": "email",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_solo_component_connects",
+  "info": {
+    "name": "Connect",
+    "icon": "allergies",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "profileURL": {
+      "type": "string",
+      "required": true
+    },
+    "modeOfConnect": {
+      "type": "enumeration",
+      "enum": [
+        "github",
+        "linkedin",
+        "facebook",
+        "instagram"
+      ],
+      "required": true
+    }
+  }
+}

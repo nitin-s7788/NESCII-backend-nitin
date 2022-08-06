@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_comment_comments",
+  "info": {
+    "name": "Comment",
+    "icon": "ad",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "author": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "content": {
+      "type": "text"
+    },
+    "timeStamp": {
+      "type": "datetime"
+    },
+    "Reports": {
+      "type": "integer"
+    },
+    "reply_comment": {
+      "type": "component",
+      "repeatable": true,
+      "component": "comment.reply"
+    },
+    "comments_user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

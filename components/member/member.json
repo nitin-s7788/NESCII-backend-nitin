@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_member_members",
+  "info": {
+    "name": "Member",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "roll_no": {
+      "type": "string"
+    },
+    "branch": {
+      "type": "string"
+    },
+    "Section": {
+      "type": "integer"
+    },
+    "campus": {
+      "type": "enumeration",
+      "enum": [
+        "East",
+        "West",
+        "Main"
+      ]
+    },
+    "contact_number": {
+      "type": "biginteger"
+    },
+    "email_id": {
+      "type": "email"
+    }
+  }
+}

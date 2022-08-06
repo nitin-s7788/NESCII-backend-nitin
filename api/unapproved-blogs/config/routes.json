@@ -1,0 +1,68 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/unapproved-blogs/custom",
+      "handler": "unapproved-blogs.findCustom",
+      "config": {
+        "policies": ["isCurrentUser"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/unapproved-blogs",
+      "handler": "unapproved-blogs.find",
+      "config": {
+        "policies": ["isCurrentUser"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/unapproved-blogs/count",
+      "handler": "unapproved-blogs.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/unapproved-blogs/:id",
+      "handler": "unapproved-blogs.findOne",
+      "config": {
+        "policies": ["isCurrentUser"]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/unapproved-blogs",
+      "handler": "unapproved-blogs.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/unapproved-blogs/:id",
+      "handler": "unapproved-blogs.update",
+      "config": {
+        "policies": ["isCurrentUser"]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/unapproved-blogs/approve/:id",
+      "handler": "unapproved-blogs.approve",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/unapproved-blogs/:id",
+      "handler": "unapproved-blogs.delete",
+      "config": {
+        "policies": ["isCurrentUser"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_solo_component_tags",
+  "info": {
+    "name": "Tags",
+    "icon": "address-book"
+  },
+  "options": {},
+  "attributes": {
+    "tagName": {
+      "model": "tags"
+    },
+    "weight": {
+      "type": "float",
+      "default": 1
+    }
+  }
+}

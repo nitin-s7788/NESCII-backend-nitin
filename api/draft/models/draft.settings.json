@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "drafts",
+  "info": {
+    "name": "Draft"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Content": {
+      "type": "richtext"
+    },
+    "author": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "drafts"
+    },
+    "tagline": {
+      "type": "string"
+    }
+  }
+}

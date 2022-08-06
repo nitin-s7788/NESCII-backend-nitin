@@ -1,0 +1,183 @@
+{
+  "kind": "collectionType",
+  "collectionName": "users-permissions_user",
+  "info": {
+    "name": "user",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false,
+    "timestamps": true
+  },
+  "attributes": {
+    "username": {
+      "type": "string",
+      "minLength": 3,
+      "unique": true,
+      "configurable": false,
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "minLength": 6,
+      "configurable": false,
+      "required": true
+    },
+    "provider": {
+      "type": "string",
+      "configurable": false
+    },
+    "password": {
+      "type": "password",
+      "minLength": 6,
+      "configurable": false,
+      "private": true
+    },
+    "resetPasswordToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmationToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "blocked": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "role": {
+      "model": "role",
+      "via": "users",
+      "plugin": "users-permissions",
+      "configurable": false
+    },
+    "name": {
+      "type": "string",
+      "required": false
+    },
+    "bio": {
+      "type": "text"
+    },
+    "institute": {
+      "type": "string",
+      "required": false
+    },
+    "tags": {
+      "type": "json"
+    },
+    "avatar": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "",
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "required": false
+    },
+    "blogs_bookmark": {
+      "collection": "blogs"
+    },
+    "blog_upvotes": {
+      "via": "upvoters",
+      "collection": "blogs"
+    },
+    "comments": {
+      "collection": "comment",
+      "via": "author"
+    },
+    "replies": {
+      "collection": "reply",
+      "via": "author"
+    },
+    "blogs": {
+      "via": "author",
+      "collection": "blogs"
+    },
+    "followers": {
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "following": {
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "connectWithUs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "solo-component.connect"
+    },
+    "Age": {
+      "type": "integer"
+    },
+    "reportedBlogs": {
+      "via": "reports",
+      "collection": "blogs"
+    },
+    "Contact_Number": {
+      "type": "biginteger"
+    },
+    "preferences": {
+      "via": "users",
+      "collection": "categories"
+    },
+    "ml_tags": {
+      "type": "component",
+      "repeatable": true,
+      "component": "solo-component.tags"
+    },
+    "isOrganization": {
+      "type": "boolean",
+      "default": false,
+      "configurable": true
+    },
+    "organization_details": {
+      "type": "component",
+      "repeatable": false,
+      "component": "solo-component.organization"
+    },
+    "events": {
+      "via": "user",
+      "collection": "event"
+    },
+    "unapproved_blogs": {
+      "via": "author",
+      "collection": "unapproved-blogs"
+    },
+    "isCelebrity": {
+      "type": "boolean",
+      "default": false,
+      "configurable": true
+    },
+    "drafts": {
+      "via": "author",
+      "collection": "draft"
+    },
+    "banner": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

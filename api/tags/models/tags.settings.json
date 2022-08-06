@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tags",
+  "info": {
+    "name": "Tags",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "View_Count": {
+      "type": "integer"
+    },
+    "blogs": {
+      "via": "tags",
+      "collection": "blogs",
+      "dominant": true
+    },
+    "Blog_count": {
+      "type": "integer"
+    },
+    "categories": {
+      "via": "tags",
+      "collection": "categories"
+    }
+  }
+}
